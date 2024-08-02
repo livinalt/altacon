@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -16,10 +18,17 @@ const About = () => {
 
         {/* Experience 1 */}
         <section className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 py-4 sm:py-8">
-          <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
-            Product Design (UI/UX Design) | <br />
-            <span className="text-gray-400">2023 - Present</span>
-          </h2>
+          <div className="flex gap-2 items-start">
+            <FontAwesomeIcon
+              icon={faCircle}
+              size="lg"
+              style={{ color: "#74C0FC" }}
+            />
+            <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
+              Product Design (UI/UX Design) | <br />
+              <span className="text-gray-400">2023 - Present</span>
+            </h2>
+          </div>
           <p className="text-sm sm:text-base lg:text-lg w-full">
             Providing guidance and mentorship to aspiring product designers,
             focusing on user-centered design principles and best practices. I
@@ -31,10 +40,17 @@ const About = () => {
 
         {/* Experience 2 */}
         <section className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 py-4 sm:py-8">
-          <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
-            Front-End Development | <br />
-            <span className="text-gray-400">2023 - Present</span>
-          </h2>
+          <div className="flex gap-2 items-start">
+            <FontAwesomeIcon
+              icon={faCircle}
+              size="lg"
+              style={{ color: "#74C0FC" }}
+            />
+            <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
+              Front-End Development | <br />
+              <span className="text-gray-400">2023 - Present</span>
+            </h2>
+          </div>
           <p className="text-sm sm:text-base lg:text-lg w-full">
             Specializing in building responsive, interactive, and user-friendly
             web applications using modern front-end technologies like React,
@@ -46,10 +62,17 @@ const About = () => {
 
         {/* Experience 3 */}
         <section className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 py-4 sm:py-8">
-          <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
-            Web3 Applications Development | <br />
-            <span className="text-gray-400">2023 - Present</span>
-          </h2>
+          <div className="flex gap-2 items-start">
+            <FontAwesomeIcon
+              icon={faCircle}
+              size="lg"
+              style={{ color: "#74C0FC" }}
+            />
+            <h2 className="text-lg sm:text-xl lg:text-2xl w-full sm:w-[40vw] lg:w-[30vw]">
+              Web3 Applications Development | <br />
+              <span className="text-gray-400">2023 - Present</span>
+            </h2>
+          </div>
           <p className="text-sm sm:text-base lg:text-lg w-full">
             Developing decentralized applications (DApps) on blockchain
             platforms, focusing on smart contract integration, security, and

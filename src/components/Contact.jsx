@@ -1,24 +1,45 @@
 import React from "react";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
   return (
-    <div className="flex justify-between bg-[#093262] text-white h-100vh p-12">
-      <div className="">
-        <h3 className="text-xl">Contact</h3>
-        <p>Have ideas to you want to collaborate on? </p>
-        <button className="px-10 py-2 border rounded-3xl outline-blue-600">
-          Lets Connect!
+    <div className="flex flex-col lg:flex-row justify-between bg-[#093262] text-white p-8 sm:p-12 lg:p-16 h-auto lg:h-[60vh]">
+      <div className="mb-8 lg:mb-0 lg:w-1/2">
+        <h3 className="text-lg sm:text-xl mb-4">Contact</h3>
+        <p className="mb-6">Have ideas you want to collaborate on?</p>
+        <button className="px-6 sm:px-10 py-2 border rounded-3xl hover:bg-blue-700 transition-all">
+          <span className="flex items-center gap-2">
+            Let's Connect!
+            <a href="">
+              <FontAwesomeIcon
+                icon={faExternalLink}
+                size="sm"
+                style={{ color: "#ffffff" }}
+              />
+            </a>
+          </span>
         </button>
       </div>
 
-      <div className="flex flex-col">
-        <h3 className="text-xl">Links</h3>
-        <div className="flex text-sm gap-2 flex-wrap">
-          <a href="">About</a>
-          <a href="">Solutions</a>
-          <a href="">Academy</a>
-          <a href="">Privacy</a>
-          <a href="">Terms</a>
+      <div className="lg:w-1/2">
+        <h3 className="text-lg sm:text-xl mb-4">Links</h3>
+        <div className="flex flex-wrap gap-4 text-sm">
+          <a href="" className="hover:text-blue-400 transition-colors">
+            About
+          </a>
+          <a href="" className="hover:text-blue-400 transition-colors">
+            Solutions
+          </a>
+          <a href="" className="hover:text-blue-400 transition-colors">
+            Academy
+          </a>
+          <a href="" className="hover:text-blue-400 transition-colors">
+            Privacy
+          </a>
+          <a href="" className="hover:text-blue-400 transition-colors">
+            Terms
+          </a>
         </div>
       </div>
     </div>
