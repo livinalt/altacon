@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, RadioCards, Flex, Text } from "@radix-ui/themes";
 import pr1 from "../assets/Projects/pr1.jpg";
 import pr2 from "../assets/Projects/pr2.jpg";
-import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { redirect, useNavigate } from "react-router-dom";
 
 const projects = [
   { id: 1, name: "Project One", imgSrc: pr1, link: "/project/1" },
@@ -27,6 +29,25 @@ const getRandomColor = () => {
 
 const Home = () => {
   const navigate = useNavigate();
+  const [isStickyVisible, setStickyVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("project-nav");
+      const sectionOffsetTop = section.offsetTop;
+
+      if (window.scrollY >= sectionOffsetTop) {
+        setStickyVisible(true);
+      } else {
+        setStickyVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleImageClick = (link) => {
     navigate(link);
@@ -35,18 +56,28 @@ const Home = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="h-[100vh] flex items-center justify-center">
-        <h2 className="text-left font-semibold text-4xl sm:text-5xl md:text-xl lg:text-7xl w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] mt-[10vh] sm:mt-[15vh] md:mt-[20vh] lg:mt-[25vh] mb-[10vh] sm:mb-[15vh] md:mb-[20vh] lg:mb-[25vh] ml-4 sm:ml-8 md:ml-12 lg:ml-20 bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent">
+      <section className="h-[100vh] flex flex-col items-center justify-center text-center px-4">
+        <h2 className="text-xl sm:text-4xl lg:text-7xl max-w-6xl mx-auto bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent leading-tight">
           Transforming Ideas into Interactive Masterpieces with Cutting-Edge
           Design and Development
         </h2>
+        <div className="relative mt-8 p-4 rounded-full overflow-hidden">
+          <div className="absolute inset-0 border-2 border-transparent rounded-full transition-colors duration-300 ease-in-out hover:bg-gradient-to-r from-[#1266C8] to-[#093262]"></div>
+          <FontAwesomeIcon
+            icon={faCircleChevronDown}
+            size="3x"
+            className="relative text-[#cdcdcd] transition-colors duration-300 ease-in-out hover:text-white"
+          />
+        </div>
       </section>
 
       {/* Projects with sticky navigation */}
-      <section>
+      <section id="project-nav">
         <Box
           maxWidth="100%"
-          className="sticky top-0 left-0 bg-white p-4 shadow-lg z-50"
+          className={`sticky top-0 left-0 bg-white p-4 shadow-lg z-50 transition-opacity duration-500 ${
+            isStickyVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         >
           <RadioCards.Root
             defaultValue="1"
