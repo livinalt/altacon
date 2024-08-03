@@ -2,7 +2,9 @@ import React from 'react'
 
 const Solutions = () => {
   return (
-    <div>Solutions</div>
+    <div>
+      
+    </div>
   )
 }
 

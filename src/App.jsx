@@ -7,6 +7,9 @@ import Solutions from "./pages/Solutions";
 import Academy from "./pages/Academy";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Terms from "./pages/Terms";
+import Case from "./pages/Case";
+import Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/case" element={<Case />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
       <Contact />
       <Footer />

@@ -2,8 +2,36 @@ import React from "react";
 import { Box, RadioCards, Flex, Text } from "@radix-ui/themes";
 import pr1 from "../assets/Projects/pr1.jpg";
 import pr2 from "../assets/Projects/pr2.jpg";
+import { useNavigate } from "react-router-dom";
+
+const projects = [
+  { id: 1, name: "Project One", imgSrc: pr1, link: "/project/1" },
+  { id: 2, name: "Project Two", imgSrc: pr2, link: "/project/2" },
+  { id: 3, name: "Project Three", imgSrc: pr1, link: "/project/3" },
+  { id: 4, name: "Project Four", imgSrc: pr1, link: "/project/4" },
+  { id: 5, name: "Project Five", imgSrc: pr2, link: "/project/5" },
+  { id: 6, name: "Project Six", imgSrc: pr1, link: "/project/6" },
+];
+
+const getRandomColor = () => {
+  const colors = [
+    "#FF5733",
+    "#33FF57",
+    "#3357FF",
+    "#F333FF",
+    "#FF33A1",
+    "#33FFF2",
+  ];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleImageClick = (link) => {
+    navigate(link);
+  };
+
   return (
     <div>
       {/* Hero section */}
@@ -52,46 +80,44 @@ const Home = () => {
         </Box>
 
         {/* UI/UX Section */}
-        <div id="uiux" className="flex flex-wrap mt-8">
-          <div className="flex flex-wrap justify-between">
-            <img
-              src={pr1}
-              alt="image_one"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-            <img
-              src={pr2}
-              alt="image_two"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-            <img
-              src={pr1}
-              alt="image_three"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-            <img
-              src={pr1}
-              alt="image_four"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-            <img
-              src={pr2}
-              alt="image_five"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-            <img
-              src={pr1}
-              alt="image_six"
-              className="w-full sm:w-1/2 lg:w-1/3 h-auto"
-            />
-          </div>
+        <div
+          id="uiux"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mt-8"
+        >
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="relative group cursor-pointer"
+              onClick={() => handleImageClick(project.link)}
+            >
+              <img
+                src={project.imgSrc}
+                alt={project.name}
+                className="w-full h-auto object-cover"
+              />
+              <div
+                className="absolute inset-0 flex items-center justify-center text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundColor: getRandomColor() }}
+              >
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
+                  <a
+                    href={project.link}
+                    className="px-4 py-2 border border-white rounded-3xl bg-transparent hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* FrontEnd Section */}
-     
+        {/* Add your FrontEnd section here */}
 
         {/* Web3 Section */}
-        
+        {/* Add your Web3 section here */}
       </section>
 
       {/* Academy section */}
