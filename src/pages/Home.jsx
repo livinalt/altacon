@@ -6,51 +6,52 @@ import pr2 from "../assets/Projects/pr2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+// import projects from '../objects/projects'
 
 const projects = [
   {
-    id: 1,
-    name: "Project One",
+     id: 1,
+     name: "Project One",
     imgSrc: pr1,
     link: "/project/1",
     category: "UIUX",
-  },
-  {
-    id: 2,
-    name: "Project Two",
-    imgSrc: pr2,
-    link: "/project/2",
-    category: "FrontEnd",
-  },
-  {
-    id: 3,
-    name: "Project Three",
-    imgSrc: pr1,
-    link: "/project/3",
-    category: "Web3 DApp",
-  },
-  {
-    id: 4,
-    name: "Project Four",
-    imgSrc: pr1,
-    link: "/project/4",
-    category: "UIUX",
-  },
-  {
-    id: 5,
-    name: "Project Five",
-    imgSrc: pr2,
-    link: "/project/5",
-    category: "FrontEnd",
-  },
-  {
-    id: 6,
-    name: "Project Six",
-    imgSrc: pr1,
-    link: "/project/6",
-    category: "Web3 DApp",
-  },
-];
+   },
+   {
+     id: 2,
+     name: "Project Two",
+     imgSrc: pr2,
+     link: "/project/2",
+     category: "FrontEnd",
+   },
+   {
+     id: 3,
+     name: "Project Three",
+     imgSrc: pr1,
+     link: "/project/3",
+     category: "Web3 DApp",
+   },
+   {
+     id: 4,
+     name: "Project Four",
+     imgSrc: pr1,
+     link: "/project/4",
+     category: "UIUX",
+   },
+   {
+     id: 5,
+     name: "Project Five",
+     imgSrc: pr2,
+     link: "/project/5",
+     category: "FrontEnd",
+   },
+   {
+     id: 6,
+     name: "Project Six",
+     imgSrc: pr1,
+     link: "/project/6",
+     category: "Web3 DApp",
+   },
+ ];
 
 const getRandomColor = () => {
   const colors = [

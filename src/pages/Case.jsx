@@ -158,7 +158,7 @@ const Case = () => {
           <h2 className=" text-center text-2xl sm:text-3xl lg:text-4xl mb-4">
             Conclusion
           </h2>
-          <p className="text-sm text-justify sm:text-base lg:text-lg leading-relaxed text-justify">
+          <p className="text-sm text-justify sm:text-base lg:text-lg leading-relaxed">
             But I must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
             account of the system, and expound the actual teachings of the great

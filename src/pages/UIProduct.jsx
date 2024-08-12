@@ -5,7 +5,7 @@ import {
   faExternalLink,
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import pr1 from "../assets/Projects/pr1.jpg"; // Ensure this is imported correctly
+import pr1 from "../assets/Projects/pr1.jpg";
 import projects from '../objects/projects'
 
 const UIProduct = () => {
@@ -95,7 +95,7 @@ const UIProduct = () => {
 
             <div className="w-full">
               <img
-                src={project.image}
+                src={project.imgSrc}
                 alt="project_preview"
                 className="w-full h-auto object-cover"
               />
@@ -121,7 +121,7 @@ const UIProduct = () => {
 
               <div className="w-full">
                 <img
-                  src={project.image}
+                  src={project.imgSrc}
                   alt="project_preview"
                   className="w-full h-auto object-cover"
                 />
@@ -167,7 +167,7 @@ const UIProduct = () => {
             </div>
             <div className="lg:w-1/2">
               <img
-                src={project.image}
+                src={project.imgSrc}
                 alt="project_preview"
                 className="w-full h-auto object-cover"
               />

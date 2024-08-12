@@ -24,7 +24,8 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/case" element={<Case />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/uiproduct" element={<UIProduct />} />
+        {/* <Route path="/uiwork" element={<UIWork />} /> */}
+        <Route path="/project/:id" element={<UIProduct />} />
       </Routes>
       <Contact />
       <Footer />
