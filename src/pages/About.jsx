@@ -1,12 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import '../components/Contact.css'
 
 const About = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="h-[60vh] sm:h-[80vh] lg:h-[100vh] flex items-center justify-center">
+      <section className="heroBackground h-[60vh] sm:h-[80vh] lg:h-[100vh] flex items-center justify-center">
         <h2 className="text-center font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] mt-[10vh] sm:mt-[15vh] md:mt-[20vh] lg:mt-[25vh] mb-[10vh] sm:mb-[15vh] md:mb-[20vh] lg:mb-[25vh] bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent">
           About
         </h2>

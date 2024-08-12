@@ -1,10 +1,11 @@
-import React from "react";
+// import React from "react";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './Contact.css';
 
 const Contact = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center bg-[#093262] text-white p-8 sm:p-12 lg:p-16 h-[60vh]">
+    <div className="contactBackground flex flex-col lg:flex-row justify-between items-center lg:items-center bg-[#093262] text-white p-8 sm:p-12 lg:p-16 h-[60vh]">
       <div className="mb-8 lg:mb-0 lg:w-1/2 text-center lg:text-left">
         <h3 className="text-lg sm:text-xl mb-4">Contact</h3>
         <p className="mb-6">Have ideas you want to collaborate on?</p>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, RadioCards, Flex, Text } from "@radix-ui/themes";
+import '../components/Contact.css'
 import pr1 from "../assets/Projects/pr1.jpg";
 import pr2 from "../assets/Projects/pr2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -98,7 +99,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="h-[100vh] flex flex-col items-center justify-center text-center px-4">
+      <section className="heroBackground h-[100vh] flex flex-col items-center justify-center text-center px-4">
         <h2 className="text-xl sm:text-4xl lg:text-7xl max-w-6xl mx-auto bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent leading-tight">
           Transforming Ideas into Interactive Masterpieces with Cutting-Edge
           Design and Development

@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Terms from "./pages/Terms";
 import Case from "./pages/Case";
 import Privacy from "./pages/Privacy";
+import UIProduct from "./pages/UIProduct";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/case" element={<Case />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/uiproduct" element={<UIProduct />} />
       </Routes>
       <Contact />
       <Footer />
