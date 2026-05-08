@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, RadioCards, Flex, Text } from "@radix-ui/themes";
+import { Box, RadioCards, Flex, Text, Button } from "@radix-ui/themes";
 import '../components/Contact.css'
 import pr1 from "../assets/Projects/pr1.jpg";
 import pr2 from "../assets/Projects/pr2.jpg";
@@ -10,48 +10,48 @@ import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
-     id: 1,
-     name: "Project One",
+    id: 1,
+    name: "Project One",
     imgSrc: pr1,
     link: "/project/1",
     category: "UIUX",
-   },
-   {
-     id: 2,
-     name: "Project Two",
-     imgSrc: pr2,
-     link: "/project/2",
-     category: "FrontEnd",
-   },
-   {
-     id: 3,
-     name: "Project Three",
-     imgSrc: pr1,
-     link: "/project/3",
-     category: "Web3 DApp",
-   },
-   {
-     id: 4,
-     name: "Project Four",
-     imgSrc: pr1,
-     link: "/project/4",
-     category: "UIUX",
-   },
-   {
-     id: 5,
-     name: "Project Five",
-     imgSrc: pr2,
-     link: "/project/5",
-     category: "FrontEnd",
-   },
-   {
-     id: 6,
-     name: "Project Six",
-     imgSrc: pr1,
-     link: "/project/6",
-     category: "Web3 DApp",
-   },
- ];
+  },
+  {
+    id: 2,
+    name: "Project Two",
+    imgSrc: pr2,
+    link: "/project/2",
+    category: "FrontEnd",
+  },
+  {
+    id: 3,
+    name: "Project Three",
+    imgSrc: pr1,
+    link: "/project/3",
+    category: "Web3 DApp",
+  },
+  {
+    id: 4,
+    name: "Project Four",
+    imgSrc: pr1,
+    link: "/project/4",
+    category: "UIUX",
+  },
+  {
+    id: 5,
+    name: "Project Five",
+    imgSrc: pr2,
+    link: "/project/5",
+    category: "FrontEnd",
+  },
+  {
+    id: 6,
+    name: "Project Six",
+    imgSrc: pr1,
+    link: "/project/6",
+    category: "Web3 DApp",
+  },
+];
 
 const getRandomColor = () => {
   const colors = [
@@ -101,10 +101,24 @@ const Home = () => {
     <div>
       {/* Hero section */}
       <section className="heroBackground h-[100vh] flex flex-col items-center justify-center text-center px-4">
-        <h2 className="text-xl sm:text-4xl lg:text-7xl max-w-6xl mx-auto bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent leading-tight">
-          Transforming Ideas into Interactive Masterpieces with Cutting-Edge
-          Design and Development
+        <h2 className="text-xl sm:text-4xl lg:text-7xl font-bold max-w-6xl mx-auto bg-gradient-to-r from-[#1266C8] to-[#093262] bg-clip-text text-transparent leading-tight">
+          Designing & Building <span className="block">Scalable Products</span>
         </h2>
+        <p className="text-base sm:text-lg lg:text-xl mt-4 text-gray-600 max-w-3xl">
+          Dedicated to creating solutions that drive growth and success for our
+          clients.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+          <Button variant="primary" size="xl" className="w-full lg:w-auto">
+            Book a Call
+          </Button>
+
+          <Button variant="ghost" size="xl" className="w-full lg:w-auto">
+            Our Work
+          </Button>
+        </div>
+
         <div className="relative mt-8 p-4 rounded-full">
           <div className="absolute inset-0 rounded-full border-2 border-transparent transition-all duration-300 ease-in-out hover:border-gradient-to-r hover:from-[#1266C8] hover:to-[#093262]">
             <FontAwesomeIcon
@@ -120,9 +134,8 @@ const Home = () => {
       <section id="project-nav">
         <Box
           maxWidth="100%"
-          className={`sticky top-0 left-0 bg-white p-4 shadow-lg z-50 transition-opacity duration-500 ${
-            isStickyVisible ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+          className={`sticky top-0 left-0 bg-white p-4 shadow-lg z-50 transition-opacity duration-500 ${isStickyVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
         >
           <div className="flex justify-center space-x-4 mt-4 mb-8">
             <button

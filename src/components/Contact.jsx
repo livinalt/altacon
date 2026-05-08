@@ -2,6 +2,9 @@
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Contact.css';
+import {Link} from "react-router-dom"
+import Solutions from "../pages/Solutions";
+import Privacy from "../pages/Privacy";
 
 const Contact = () => {
   return (
@@ -26,21 +29,23 @@ const Contact = () => {
       <div className="lg:w-1/2 text-center lg:text-left">
         <h3 className="text-lg sm:text-xl mb-4">Links</h3>
         <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
-          <a href="" className="hover:text-blue-400 transition-colors">
+          
+          <Link to="/about" className="hover:underline">
             About
-          </a>
-          <a href="" className="hover:text-blue-400 transition-colors">
+          </Link>
+
+          <Link to="/solutions" className="hover:underline">
             Solutions
-          </a>
-          <a href="" className="hover:text-blue-400 transition-colors">
-            Academy
-          </a>
-          <a href="" className="hover:text-blue-400 transition-colors">
-            Privacy
-          </a>
-          <a href="" className="hover:text-blue-400 transition-colors">
-            Terms
-          </a>
+          </Link>
+
+          <Link to="/privacy" className="hover:underline">
+            Privacy Policy
+          </Link>
+
+          <Link to="/terms" className="hover:underline">
+            Terms of Service
+          </Link> 
+
         </div>
       </div>
     </div>
